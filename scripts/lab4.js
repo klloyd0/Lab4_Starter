@@ -7,14 +7,14 @@
  */
 function sumValues(num1, num2, add) {
     if (add) {
-        const result = 0;
+        let result = 0;        //'const' does not allow for reassign
 
         result = num1 + num2;
 
         return result;
     }
     else {
-        return !add;
+        return false;          //could use 'false' instead
     }
 }
 
@@ -29,7 +29,7 @@ function discountPrices(prices, discount) {
     const length = prices.length;
     let discountedPrice = 0
     for(let i = 0; i < length; i++) {
-        discountedPrice += prices[i] * (1 - discount);
+        discountedPrice = prices[i] * (1 - discount);        //use "=" instead
         discounted.push(discountedPrice);
     }
 
